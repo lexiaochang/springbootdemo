@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication
+@RequestMapping("/restview")
 public class DemoApplication {
+
     @Value(value = "${book.author}")
     private String bookAuthor;
+
     @Value("${book.name}")
     private String bookName;
+
     @Value("${book.pinyin}")
     private String bookPinYin;
 
@@ -28,7 +32,7 @@ public class DemoApplication {
 
     @RequestMapping(value = "/chris", produces = "text/plain;charset=UTF-8")
     String test() {
-        return "Hello Spring Boot! The BookName is "+bookName+";and Book Author is "+bookAuthor+";and Book PinYin is "+bookPinYin;
+        return "Hello Spring Boot! The BookName is " + bookName + ";and Book Author is " + bookAuthor + ";and Book PinYin is " + bookPinYin;
     }
 
 
