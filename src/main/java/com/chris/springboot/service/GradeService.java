@@ -18,7 +18,7 @@ public class GradeService {
     @Autowired
     private GradeMapper gradeMapper;
 
-    public List<GradeEntity> getByGradeNm(String name){
+    public List<GradeEntity> getByGradeNm(String name)  throws Exception{
         return gradeMapper.getByGradeNm(name);
     }
 

@@ -4,17 +4,16 @@ import com.chris.springboot.entity.GradeEntity;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by Chris on 2017/12/4.
  */
-
+@Repository
 public interface GradeMapper {
 
-    @Select("select * from grade where grade_nm=#{name}")
     List<GradeEntity> getByGradeNm(String name);
 
     @Insert("insert into grade(grade_nm,teacher_id) values(#{gradeNm},#{teacherId})")

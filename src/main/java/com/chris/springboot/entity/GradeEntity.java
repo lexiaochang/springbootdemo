@@ -9,7 +9,16 @@ public class GradeEntity {
 
     private int    id;
     private String gradeNm;
+    private String grade_nm;
     private int    teacherId;
+
+    public String getGrade_nm() {
+        return grade_nm;
+    }
+
+    public void setGrade_nm(String grade_nm) {
+        this.grade_nm = grade_nm;
+    }
 
     public int getId() {
         return id;

@@ -24,7 +24,7 @@ public class GradeController {
 
     @ResponseBody
     @RequestMapping("/getByGradeNm")
-    public List<GradeEntity> getByGradeNm(String name){
+    public List<GradeEntity> getByGradeNm(String name) throws Exception {
         return gradeService.getByGradeNm(name);
     }
 }
