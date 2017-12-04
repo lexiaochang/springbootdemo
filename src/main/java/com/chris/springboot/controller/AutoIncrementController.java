@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 /**
@@ -94,6 +96,14 @@ public class AutoIncrementController {
         ResponseEntity<String> responseEntity = new ResponseEntity<>(json.toString(), HttpStatus.OK);
         return responseEntity;
     }
+
+
+    @ResponseBody
+    @RequestMapping("/getlist")
+    public List<AutoIncrementEntity> getList(String name) throws Exception {
+        return mAutoIncrementService.getList(name);
+    }
+
 
     public String sendPost() {
         //发送 POST 请求

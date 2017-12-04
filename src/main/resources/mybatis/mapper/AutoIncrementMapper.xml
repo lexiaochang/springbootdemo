@@ -29,4 +29,8 @@
         where id = '3'
     </update>
 
+    <select id="getList" parameterType="String" resultType="com.chris.springboot.entity.AutoIncrementEntity">
+        SELECT * FROM auto_increment WHERE name = #{name}
+    </select>
+
 </mapper>

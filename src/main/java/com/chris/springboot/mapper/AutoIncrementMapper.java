@@ -4,6 +4,8 @@ import com.chris.springboot.entity.AutoIncrementEntity;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * Created by Chris on 2017/12/4.
  */
@@ -14,4 +16,5 @@ public interface AutoIncrementMapper {
     AutoIncrementEntity selectData(Long id) throws Exception;
     int deleteData(Long id) throws Exception;
     int updateData(AutoIncrementEntity autoIncrementEntity) throws Exception;
+    List<AutoIncrementEntity> getList(String name) throws Exception;
 }

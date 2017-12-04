@@ -7,6 +7,8 @@ import com.chris.springboot.service.AutoIncrementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Chris on 2017/12/4.
  */
@@ -35,5 +37,10 @@ public class AutoIncrementServiceImpl implements AutoIncrementService {
     @Override
     public int updateData(AutoIncrementEntity autoIncrementEntity) throws Exception {
         return mAutoIncrementEntityMapper.updateData(autoIncrementEntity);
+    }
+
+    @Override
+    public List<AutoIncrementEntity> getList(String name) throws Exception {
+        return mAutoIncrementEntityMapper.getList(name);
     }
 }

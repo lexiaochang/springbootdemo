@@ -2,6 +2,8 @@ package com.chris.springboot.service;
 
 import com.chris.springboot.entity.AutoIncrementEntity;
 
+import java.util.List;
+
 /**
  * Created by Chris on 2017/12/4.
  */
@@ -14,4 +16,6 @@ public interface AutoIncrementService {
     int deleteData(Long id) throws Exception;
 
     int updateData(AutoIncrementEntity autoIncrementEntity) throws Exception;
+
+    List<AutoIncrementEntity> getList(String name) throws Exception;
 }
