@@ -1,5 +1,6 @@
 package com.chris.springboot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 @RequestMapping("/restview")
+@MapperScan("com.chris.springboot")//告诉mapper所在的包名
 public class DemoApplication {
 
     @Value(value = "${book.author}")

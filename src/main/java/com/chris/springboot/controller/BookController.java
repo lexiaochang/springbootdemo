@@ -1,10 +1,8 @@
 package com.chris.springboot.controller;
 
-import com.chris.springboot.model.BookEntity;
+import com.chris.springboot.entity.BookEntity;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,8 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by Chris on 2017/11/30.
  */
 
-@Component
-@PropertySource("classpath:/book.properties")
 @Controller
 @RequestMapping("/bookview")
 public class BookController {
